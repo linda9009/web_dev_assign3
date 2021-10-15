@@ -14,7 +14,6 @@ function addR() {
 }
 //Add a column
 function addC() {
-    alert(numCols)
     numCols++;
     var table = document.getElementById("grid");
     if (numRows ===0){
