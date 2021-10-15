@@ -65,6 +65,8 @@ function removeC() {
         for (var i = 0; i < table.rows.length; i++){
             firstRow = table.rows[i];
             firstRow.deleteCell(0);}
+        if (numCols == 0) numRows = 0;
+
     }
 }
 //sets global var for selected color
