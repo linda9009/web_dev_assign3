@@ -5,18 +5,22 @@ let colorSelected;
 //Add a row
 function addR() {
     var table = document.getElementById("grid");
-
-    numRows++;
-    var row = table.insertRow();
-    if (numCols ===0){
-        numCols++;
-        row.insertCell();
+    if (numCols ===0 || numRows ===0){
+        table.insertRow(0);
+        numRows = 1;
+        table.rows[0].insertCell();
+        numCols = 1;
     }
-    else{
+    else if (numCols > 1){
     for (var i = 0; i < table.rows[0].cells.length; i++){
-        var cell = row.insertCell();
+        table.rows[i].insertCell();
         }
     }
+    else{
+        table.insertRow(0);
+        numRows++;
+        table.rows[0].insertCell();
+}
 }
 //Add a column
 function addC() {
