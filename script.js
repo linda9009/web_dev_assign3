@@ -46,11 +46,11 @@ function removeR() {
     var table = document.getElementById("grid");
     if (numRows ===0){
         alert("No Rows to Delete");
-        numCols = 0;
     }
     else{
         numRows--;
         table.deleteRow(0);
+        if (numRows == 0) numCols = 0;
     }
 }
 //Remove a column
