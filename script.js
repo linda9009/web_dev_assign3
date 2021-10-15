@@ -34,10 +34,10 @@ function addC() {
         numCols = 1;
     }
     else {
-    for (var i = 0; i < table.rows.length; i++){
+    numCols++;
+    for (var i = 0; i < numRows; i++){
     firstRow = table.rows[i];
     firstRow.insertCell();}
-    numCols++;
     }
 }
 
