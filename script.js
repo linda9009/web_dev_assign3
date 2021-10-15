@@ -5,12 +5,18 @@ let colorSelected;
 //Add a row
 function addR() {
     var table = document.getElementById("grid");
+
+    numRows++;
+    var row = table.insertRow();
     if (numCols ===0){
         numCols++;
+        row.insertCell();
     }
-    numRows++;
-    var row = table.insertRow(numRows-1);
-    var cell = row.insertCell(numCols-1);
+    else{
+    for (var i = 0; i < table.rows[0].cells.length; i++){
+        var cell = row.insertCell();
+        }
+    }
 }
 //Add a column
 function addC() {
