@@ -14,7 +14,20 @@ function addR() {
 }
 //Add a column
 function addC() {
-    alert("Clicked Add Col")
+    alert(numCols)
+    numCols++;
+    var table = document.getElementById("grid");
+    if (numRows ===0){
+        numRows++;
+        table.insertRow(numRows-1);
+        var row = table.insertRow(numRows-1);
+        row.insertCell(numCols-1);
+    }
+    else {
+    for (var i = 0; i < table.rows.length; i++){
+    firstRow = table.rows[i];
+    firstRow.insertCell();}
+    }
 }
 
 //Remove a row
