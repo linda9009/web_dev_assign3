@@ -8,8 +8,9 @@ function addR() {
     if (numCols ===0){
         numCols++;
     }
-    var row = table.insertRow(0);
-    var cell = row.insertCell(0)
+    numRows++;
+    var row = table.insertRow(numRows-1);
+    var cell = row.insertCell(numCols-1);
 }
 //Add a column
 function addC() {
