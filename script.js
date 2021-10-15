@@ -18,7 +18,6 @@ function addC() {
     var table = document.getElementById("grid");
     if (numRows ===0){
         numRows++;
-        table.insertRow(numRows-1);
         var row = table.insertRow(numRows-1);
         row.insertCell(numCols-1);
     }
