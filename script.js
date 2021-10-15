@@ -29,9 +29,9 @@ function addC() {
     var table = document.getElementById("grid");
     if (numRows ===0){
         table.insertRow(0);
-        numRows++;
+        numRows = 1;
         table.rows[0].insertCell(0);
-        numCols++;
+        numCols = 1;
     }
     else {
     for (var i = 0; i < table.rows.length; i++){
