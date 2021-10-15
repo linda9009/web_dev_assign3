@@ -12,8 +12,10 @@ function addR() {
         numCols = 1;
     }
     else if (numCols > 1){
-    for (var i = 0; i < table.rows[0].cells.length; i++){
-        table.rows[i].insertCell();
+        table.insertRow(0);
+        numRows++;
+    for (var i = 0; i < table.rows[1].cells.length; i++){
+        table.rows[0].insertCell();
         }
     }
     else{
