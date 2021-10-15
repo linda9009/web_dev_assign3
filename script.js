@@ -36,7 +36,15 @@ function addC() {
 
 //Remove a row
 function removeR() {
-    alert("Clicked Remove Row")
+    var table = document.getElementById("grid");
+    if (numRows ===0){
+        alert("No Rows to Delete");
+        numCols = 0;
+    }
+    else{
+        numRows--;
+        table.deleteRow(0);
+    }
 }
 //Remove a column
 function removeC() {
