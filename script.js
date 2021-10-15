@@ -20,17 +20,18 @@ function addR() {
 }
 //Add a column
 function addC() {
-    numCols++;
     var table = document.getElementById("grid");
     if (numRows ===0){
+        table.insertRow(0);
         numRows++;
-        var row = table.insertRow(numRows-1);
-        row.insertCell(numCols-1);
+        table.rows[0].insertCell(0);
+        numCols++;
     }
     else {
     for (var i = 0; i < table.rows.length; i++){
     firstRow = table.rows[i];
     firstRow.insertCell();}
+    numCols++;
     }
 }
 
