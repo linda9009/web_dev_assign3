@@ -48,7 +48,17 @@ function removeR() {
 }
 //Remove a column
 function removeC() {
-    alert("Clicked Remove Col")
+    var table = document.getElementById("grid");
+    if (numCols ===0){
+        alert("No Columns to Delete");
+        numRows = 0;
+    }
+    else{
+        numCols--;
+        for (var i = 0; i < table.rows.length; i++){
+            firstRow = table.rows[i];
+            firstRow.deleteCell(0);}
+    }
 }
 //sets global var for selected color
 function selected(){
