@@ -95,5 +95,12 @@ function clearAll(){
 }
 
 function fillU(){
-    alert("Clicked Fill All Uncolored")
+    if (colorSelected == "SELECT" || colorSelected == null){
+        alert("Please select a color")
+    }
+    var cells = document.getElementsByTagName('td');
+    for (let i = 0; i < cells.length; i++){
+        if(cells[i].style.backgroundColor != colorSelected){
+            cells[i].style.backgroundColor = colorSelected;}
+    }
 }
