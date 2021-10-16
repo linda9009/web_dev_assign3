@@ -76,7 +76,13 @@ function selected(){
 }
 
 function fill(){
-    alert("Clicked Fill All")
+if (colorSelected == "SELECT" || colorSelected == null){
+    alert("Please select a color")
+}
+var cells = document.getElementsByTagName('td');
+for (let i = 0; i < cells.length; i++){
+    cells[i].style.backgroundColor = colorSelected;
+}
 }
 
 function clearAll(){
