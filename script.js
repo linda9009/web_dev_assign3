@@ -81,6 +81,11 @@ function fill(){
 
 function clearAll(){
     alert("Clicked Clear All")
+    var cells = document.getElementsByTagName('td');
+    for(let i = 0; i <cells.length; i++){
+        cells[i].style.backgroundColor = '';
+    }
+
 }
 
 function fillU(){
