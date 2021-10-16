@@ -8,20 +8,23 @@ function addR() {
     if (numCols ===0 || numRows ===0){
         table.insertRow(0);
         numRows = 1;
-        table.rows[0].insertCell();
+        var cells = table.rows[0].insertCell();
+        cells.onclick = changeColor;
         numCols = 1;
     }
     else if (numCols > 1){
         table.insertRow(0);
         numRows++;
     for (var i = 0; i < table.rows[1].cells.length; i++){
-        table.rows[0].insertCell();
+        var cells = table.rows[0].insertCell();
+        cells.onclick = changeColor;
         }
     }
     else{
         table.insertRow(0);
         numRows++;
-        table.rows[0].insertCell();
+        var cells = table.rows[0].insertCell();
+        cells.onclick = changeColor;
 }
 }
 //Add a column
@@ -30,14 +33,15 @@ function addC() {
     if (numRows ===0){
         table.insertRow(0);
         numRows = 1;
-        table.rows[0].insertCell(0);
+        var cells = table.rows[0].insertCell(0);
+        cells.onclick = changeColor;
         numCols = 1;
     }
     else {
     numCols++;
     for (var i = 0; i < numRows; i++){
-    firstRow = table.rows[i];
-    firstRow.insertCell();}
+    var cells = table.rows[i].insertCell();
+    cells.onclick = changeColor;}
     }
 }
 
@@ -73,6 +77,17 @@ function removeC() {
 function selected(){
     colorSelected = document.getElementById("selectedID").value;
     console.log(colorSelected);
+}
+
+function changeColor(event){
+    if (colorSelected == "SELECT" || colorSelected == null){
+        alert("Please select a color")
+    }
+    var cells = document.getElementsByTagName('td');
+    for (let i = 0; i < cells.length; i++){
+        if (cells[i] == event.target){
+        cells[i].style.backgroundColor = colorSelected;}
+    }
 }
 
 function fill(){
