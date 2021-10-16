@@ -115,7 +115,7 @@ function fillU(){
     }
     var cells = document.getElementsByTagName('td');
     for (let i = 0; i < cells.length; i++){
-        if(cells[i].style.backgroundColor != colorSelected){
+        if (cells[i].style.backgroundColor == ''){
             cells[i].style.backgroundColor = colorSelected;}
     }
 }
