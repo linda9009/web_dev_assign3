@@ -62,7 +62,7 @@ function removeC() {
     }
     else{
         numCols--;
-        for (var i = 0; i < table.rows.length; i++){
+        for (var i = 0; i < numRows; i++){
             firstRow = table.rows[i];
             firstRow.deleteCell(0);}
         if (numCols == 0) numRows = 0;
